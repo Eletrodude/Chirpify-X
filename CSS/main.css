@@ -1,0 +1,85 @@
+html{
+    scroll-behavior: smooth;
+
+}
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Parent{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30%;
+    max-height: 50%;
+
+}
+
+
+
+.LogIn{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:3%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 25vw;
+
+    height: 35vh;
+    margin: auto;
+}
+
+.CenterItem{
+    display: flex;
+    justify-content: center;
+}
+
+
+#Title{
+   padding-top: 1%;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Form{
+
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 0.4rem;
+}
+form input{
+    background-color: #f1f1fb;
+    justify-content: center;
+
+    border-radius: 10px;
+    padding: 1rem 10% 1rem 10%;
+}
+
+form ::placeholder{
+    color: #b3b3b8;
+
+}
