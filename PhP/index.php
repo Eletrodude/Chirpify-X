@@ -13,7 +13,7 @@
     <h1 id = "Title">Chirpify</h1>
     <div class="LogIn">
 
-        <form action="Verwerk.php" class="Form" method="get">
+        <form action="Verwerk.php" class="Form" method="post">
 
             <h2 class="CenterItem">Log in</h2>
             <label for="Email"></label>

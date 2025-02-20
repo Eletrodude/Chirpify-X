@@ -1,5 +1,5 @@
 <?php
-echo $_GET['Email'];
-echo $_GET["Password"]
+echo $_POST['Email'];
+echo $_POST["Password"]
 
 ?>
