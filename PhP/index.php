@@ -12,14 +12,16 @@
 <div class="Parent">
     <h1 id = "Title">Chirpify</h1>
     <div class="LogIn">
-        <form action="" class="Form">
+
+        <form action="Verwerk.php" class="Form" method="get">
 
             <h2 class="CenterItem">Log in</h2>
             <label for="Email"></label>
-            <input type="email" id="Email" name="Email" placeholder="Email or Username" required>
+            <input type="email" id="Email" name="Email" placeholder="Email"  required>
 
             <label for="Password"></label>
             <input type="password" id="Password" name="Password" placeholder="Password" required>
+            <input  type="submit" placeholder="Submit" >
 
         </form>
     </div>
