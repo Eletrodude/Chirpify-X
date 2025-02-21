@@ -10,18 +10,20 @@
 
 
 <div class="Parent">
-    <h1 id = "Title">Chirpify</h1>
+<!--    <h1 id = "Title">Chirpify</h1>-->
     <div class="LogIn">
 
         <form action="Verwerk.php" class="Form" method="post">
 
             <h2 class="CenterItem">Log in</h2>
-            <label for="Email"></label>
-            <input type="email" id="Email" name="Email" placeholder="Email"  required>
+            <label for="Email">Username or Email Adress </label>
+            <input type="email" id="Email" name="Email"  required>
 
-            <label for="Password"></label>
-            <input type="password" id="Password" name="Password" placeholder="Password" required>
-            <input  type="submit" placeholder="Submit" >
+            <label for="Password">Password</label>
+            <input type="password" id="Password" name="Password"  required>
+
+            <label for="Submit"></label>
+            <input  type="submit"  id="Submit" >
 
         </form>
     </div>
