@@ -28,6 +28,6 @@
         </form>
     </div>
 </div>
-
+<img src="../Images/" alt="Background Image of a tree in the dark.">
 </body>
 </html>
