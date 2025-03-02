@@ -10,24 +10,28 @@
 
 
 <div class="Parent">
+    <div class="LogInImage">
+        <img class="Image" src="../../Chirpify-X/Assets/Images/pexels-pixabay-268533.jpg" alt="Background Image of a tree in the dark.">
+
+    </div>
 <!--    <h1 id = "Title">Chirpify</h1>-->
     <div class="LogIn">
 
         <form action="Verwerk.php" class="Form" method="post">
 
-            <h2 class="CenterItem">Log in</h2>
-            <label for="Email">Username or Email Adress </label>
+            <h2 class="CenterItem">Log in to continue</h2>
+            <label for="Email">Email Adress </label>
             <input type="email" id="Email" name="Email"  required>
 
             <label for="Password">Password</label>
             <input type="password" id="Password" name="Password"  required>
 
             <label for="Submit"></label>
-            <input  type="submit"  id="Submit" >
+            <input  type="submit"  id="Submit" value="Log in">
 
         </form>
     </div>
 </div>
-<img src="../Images/" alt="Background Image of a tree in the dark.">
+
 </body>
 </html>
