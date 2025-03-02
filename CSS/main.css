@@ -139,6 +139,20 @@ input{
 }
 
 
+.RegisterButton{
+    text-decoration: none;
+    color: blue;
+    transition-delay: 0.05s;
+}
+
+
+.RegisterButton:hover{
+    color: darkblue;
+    transition-delay: 0.05s;
+}
+
+
+
 /* Extra small devices (phones, 576px and down) */
 @media (max-width: 576px) {
  .LogInImage{

@@ -26,8 +26,11 @@
             <label for="Password">Password</label>
             <input type="password" id="Password" name="Password"  required>
 
+            <a href="Register.php" class="RegisterButton">Register here</a>
+
             <label for="Submit"></label>
             <input  type="submit"  id="Submit" value="Log in">
+
 
         </form>
     </div>
