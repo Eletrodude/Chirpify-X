@@ -11,7 +11,7 @@
 
 <div class="Parent">
     <div class="LogInImage">
-        <img class="Image" src="../../Chirpify-X/Assets/Images/pexels-pixabay-268533.jpg" alt="Background Image of a tree in the dark.">
+        <img class="Image" src="../Images/pexels-pixabay-268533.jpg" alt="Background Image of a tree in the dark.">
 
     </div>
 <!--    <h1 id = "Title">Chirpify</h1>-->
