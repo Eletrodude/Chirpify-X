@@ -1,0 +1,201 @@
+html{
+    scroll-behavior: smooth;
+    text-size-adjust: auto;
+    font-size: 1rem;
+}
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+
+.Parent{
+    /*position: relative;*/
+    z-index: 2;
+    margin-left: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.LogInImage {
+    right: 17%;
+    z-index: 1;
+    position: fixed;
+    max-height: 100%;
+    max-width:100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.Image{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.LogIn{
+    left: 64%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:3%;
+    background: linear-gradient(to right, #0D1B2A, #1B263B);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: 100%;
+    margin-right: auto;
+}
+
+.CenterItem{
+    display: flex;
+    justify-content: center;
+}
+
+
+#Title{
+   padding-top: 1%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Form{
+    padding: 5%;
+    border-radius: 12px;
+    background-color: #F8F9FA;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 0.4rem;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+    form input{
+    background-color: #f1f1fb;
+    justify-content: center;
+    border: 1px solid #CED4DA;
+    border-radius: 10px;
+    padding-top:1rem;
+    padding-bottom: 1rem;
+}
+
+input{
+    font-size: 1.2rem;
+
+}
+
+
+#Submit {
+    transition-delay: 0.01s;
+    display: block;
+    width: 100%;
+    max-width: 50%;
+    padding: 0.8rem;
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#Submit:hover{
+    background-color: #0056b3;
+}
+
+
+.RegisterButton{
+    text-decoration: none;
+    color: blue;
+    transition-delay: 0.05s;
+}
+
+
+.RegisterButton:hover{
+    color: darkblue;
+    transition-delay: 0.05s;
+}
+
+
+
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+ .LogInImage{
+     display: none;
+ }
+
+    .LogIn{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        left: -2.5%;
+        margin: auto;
+        max-height: 100%;
+        max-width: 100%;
+        position: absolute;
+
+    }
+
+
+
+}
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) {
+    /* CSS rules for larger phones */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* CSS rules for small desktops/laptops */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* CSS rules for large desktops */
+}
+
+/* Ultra-wide screens (1920px and up) */
+@media (min-width: 1920px) {
+    /* CSS rules for very large screens */
+}
