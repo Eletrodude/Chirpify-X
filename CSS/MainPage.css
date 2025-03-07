@@ -1,0 +1,157 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to right, #0D1B2A, #1B263B);
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.Posts {
+    outline: 3px black solid;
+    /* box-shadow: 3px 3px 3px #0D1B2A; */
+    background-color: #00264D;
+    max-width: 50%;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.Buttons {
+    height: 20%;
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    /* flex-direction: row; */
+    margin: auto;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.Buttons button {
+    background-color: #00264D;
+    color: #E6E6FA;
+}
+
+#Button1 {
+    box-shadow: none;
+    margin-right: auto;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 10px 20px;
+    font: bold 1.5rem Arial, serif;
+}
+
+#Button2 {
+    box-shadow: none;
+    margin-left: auto;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 10px 20px;
+    font: bold 1.5rem Arial, serif;
+}
+
+.Button1 {
+    max-width: 20%;
+    width: 100%;
+    margin-right: auto;
+    box-shadow: none;
+}
+
+.Button2 {
+    box-shadow: none;
+    max-width: 20%;
+    width: 100%;
+}
+
+.SideBar {
+    outline: 3px solid black;
+    /* top: -2%; */
+    bottom: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 25%;
+    max-height: 100%;
+    text-decoration: none;
+    height: 100vh;
+    width: 100%;
+}
+
+.Links {
+    gap: 1.5rem;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #0D1B2A, #1B263B);
+    padding-top: 15%;
+    padding-bottom: 2%;
+}
+
+.SideBar2 {
+    position: fixed;
+    margin-left: auto;
+    display: flex;
+    bottom: 0;
+    right: -0.15%;
+    outline: 3px solid black;
+    max-width: 25%;
+    max-height: 100%;
+    text-decoration: none;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+
+    form {
+        width: 75%;
+        margin-left: auto;
+    }
+
+}
+
+.SideBar2 #Search {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 300px;
+
+    background-color: #E6E6FA;
+}
+
+.SearchBar {
+
+
+    height: 10%;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+}
+
+
+img {
+    /* position: fixed; */
+    max-width: 5rem;
+    max-height: 5rem;
+    z-index: 2;
+}
+
+a {
+    font-size: 2rem;
+    color: #E6E6FA;
+    text-decoration: none;
+    /* color: black; */
+}
