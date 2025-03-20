@@ -3,7 +3,16 @@ $username = 'root';
 $password = '';
 
 
-
+if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
+    echo'Error: Invalid email';
+    return;} elseif(strlen($_POST['password']) <= 8) {
+    echo'Error: Invalid password';
+    return;
+}elseif($_POST['password'] != $_POST['confirm_password']) {
+    echo'Error: Passwords do not match';
+    header('location: ../pHP-HTML/register.html');
+    return;
+}
 
 
 try{
@@ -36,6 +45,8 @@ try{
     $insert_user->execute();
 
     echo "User registered successfully";
+
+    header("location: ../PhP-html/Php/Main.php");
 //    $stmt = $conn   ->prepare($sql);
 //    $stmt->execute();
 
