@@ -11,48 +11,39 @@ try{
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-    $hash = password_hash($_POST['Password'],PASSWORD_DEFAULT);
+    $hash = password_hash($_POST['password'],PASSWORD_DEFAULT);
 
 
     $sql =
-        'INSERT INTO data (First_Name,Last_Name,Birth_Date,Country_Of_Residence,Email,Username,Password,
-                  Telephone_Number)
+        "INSERT INTO data (First_Name,Last_Name,Birth_Date,Country_Of_Residence,Email,Username,Password,
+         Telephone_Number) 
+        VALUES (:First_Name,:Last_Name,:Birth_Date,:Country_Of_Residence,:Email,
+            :Username,:Password,:Telephone_Number) ";
 
 
-    VALUES (:First_Name,:Last_Name,:Birth_Date,:Country_Of_Residence,:Email,:Username,:Password,:Telephone_Number) ';
+    $insert_user = $conn->prepare($sql);
 
+    $insert_user->bindParam(':Username',$_POST['username']);
+    $insert_user->bindParam(':Email',$_POST['email']);
+    $insert_user->bindParam(':Password',$hash);
+    $insert_user->bindParam(':First_Name',$_POST['first_name']);
+    $insert_user->bindParam(':Last_Name',$_POST['last_name']);
+    $insert_user->bindParam(':Birth_Date',$_POST['birth_date']);
+//    $insert_user->bindParam(':Confirm_Password',$_POST['confirm_password']);
+    $insert_user->bindParam(':Country_Of_Residence', $_POST['country_of_residence']);
+    $insert_user->bindParam(':Telephone_Number', $_POST['telephone_number']);
 
+    $insert_user->execute();
 
-    $insert_user = $conn-->bindParam(':Username',$_POST['Username']);
-    $insert_user = $conn-->bindParam(':Email',$_POST['Email']);
-    $insert_user = $conn-->bindParam(':Password',$hash);
-    $insert_user = $conn-->bindParam(':First_Name',$_POST['First_Name']);
-    $insert_user = $conn-->bindParam(':Last_Name',$_POST['Last_Name']);
-    $insert_user = $conn-->bindParam(':Birth_Date',$_POST['Birth_Date']);
-    $insert_user = $conn-->bindParam(':Confimr_Password',$_POST['Confirm_Password'])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
+    echo "User registered successfully";
+//    $stmt = $conn   ->prepare($sql);
+//    $stmt->execute();
 
     
 
 
 }catch (PDOException $e){
-    echo "Connection failed:";
+    echo "Connection failed: " . $e->getMessage();
 }
 
 
