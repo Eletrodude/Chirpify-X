@@ -8,6 +8,19 @@
 </head>
 <body>
 
+<?Php
+
+if(filter_var($_POST['Email'], FILTER_VALIDATE_EMAIL) === false) {
+    echo'Error: Invalid email';
+    return;}
+//}elseif(strlen($_POST['Password']) < 4 or filter_var($_POST['Password'], FILTER_VALIDATE_INT) === false) {
+//    echo'Error: Invalid password';
+//    return;
+//}
+
+
+?>
+
 
 <div class="SideBar">
 
