@@ -1,117 +1,118 @@
 /* Global Styles */
 /* ------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    font-family: "Quicksand", sans-serif;
+
+}
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    background: linear-gradient(to right, #0D1B2A, #1B263B);
-    padding: 0;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #E6E6FA;
-}
+.row{
 
+    display: flex;
+    height: 100vh;
+    
+    
+
+}
 /* Post Section Styling */
 /* ------------------------------- */
 .Posts {
+    display: flex;
     border: 3px solid black;
     border-right: none;
-    background-color: #00264D;
-    width: 50%;
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 2%;
+    
+    
 }
 
 /* Button Styling */
 /* ------------------------------- */
 .Buttons {
+    border-bottom: 1px solid rgb(146, 142, 142);
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    gap: 10rem;
-    /*padding: 10px;*/
+    justify-content: first baseline;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    
 }
 
-.Buttons button {
-    background-color: #00264D;
-    color: #E6E6FA;
+ .Buttons button { 
     border: none;
     padding: 10px 20px;
-    font: bold 1.5rem Arial, serif;
+    font: bold  Arial, serif;
+    font-weight: 700;
     cursor: pointer;
-    margin: auto;
-}
 
-.Button1, .Button2 {
-    flex: 1;
-}
+    
+    
+    
+} 
+
 
 /* Left Sidebar Styling */
 /* ------------------------------- */
+
 .SideBar {
-    border: 3px solid black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 25%;
+    border-right: 1px solid rgb(146, 142, 142);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(to right, #0D1B2A, #1B263B);
+    align-items: center;
+    gap: 2rem;
+    
+    
+    
+}
+.Logo{
+    padding: 20px;
+    
+
+}
+.Logo h1{
+    font-family: "Dancing Script", cursive;
+    background: linear-gradient(to right, #b60799, #200f80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.Links {
+.SideBar ul{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
 }
 
-.Links a {
-    font-size: 1.5rem;
-    color: #E6E6FA;
+.SideBar a {
+    
+    font-weight: 600;
     text-decoration: none;
     margin: 10px 0;
+
 }
 
 /* Right Sidebar Styling */
 /* ------------------------------- */
 .SideBar2 {
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 25%;
-    border: 3px solid black;
+    border-left: 1px solid rgb(146, 142, 142);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #0D1B2A, #1B263B);
+    
+    
 }
 
-.SearchBar {
-    width: 80%;
-    margin: 20px auto;
-}
+.SearchBar form{
+    border-bottom: 1px solid rgb(146, 142, 142);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 
-.SideBar2 #Search {
-
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 300px;
-    background-color: #E6E6FA;
-    width: 100%;
-}
-
-/* Image Styling */
-/* ------------------------------- */
-img {
-    max-width: 5rem;
-    max-height: 5rem;
-    z-index: 2;
 }
