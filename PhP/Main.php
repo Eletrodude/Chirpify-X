@@ -13,7 +13,7 @@
 
     
     <div class="row" >              
-                        <div class=" SideBar  col-lg-2" >
+                        <div class=" SideBar  col-2" >
                             <div  class="Logo">
                                        
                                     <h1 class="nav-item"> Chirpify</h1>
@@ -53,10 +53,10 @@
                             
                         
                             
-                        <div class="Posts  col-8">
+                        <div class="Posts  col-7">
 
-                             
-                                <div class="Buttons col-12 ">
+                             <div class="all-divs">
+                                <div class="Buttons ">
                                     <div class="Button1 "  >
                                         <button id="Button1" class="btn btn-outline-secondary" >For You</button>
                                     </div>
@@ -64,17 +64,43 @@
                                         <button id="Button2" class="btn btn-outline-secondary">Following</button>
                                     </div>
                                 </div>
+
+
+                             </div>
                         
                         </div>
 
-                        <div class="SideBar2  col-2">
+                        <div class="SideBar2  col-3">
                             <div class="SearchBar">
                                 <form action="">
-                                    
+                                   
                                     <input class="form-control me-2" type="search" name="Search" id="Search">
                                     <button class="btn btn-outline-primary" type="submit" >Search</button>
                                 </form>
+                                
+                                <div class="acounts">
+                                    <h2>Voorgesteld voor jou</h2>
+                                    <div class="user-container">
+                                        <div class="user">
+                                            <img src="../Assets/Images/pexels-pixabay-268533.jpg" alt="Account1" class="img-fluid rounded-circle">
+                                            <h3>Account</h3>
+                                        </div>
+                                        <input type="button" value="Follow" class=" btn btn-outline-primary ">
+                                    </div>
+                                    <div class="user-container">
+                                        <div class="user">
+                                            <img src="../Assets/Images/pexels-pixabay-268533.jpg" alt="Account1" class="img-fluid rounded-circle">
+                                            <h3>Account</h3>
+                                        </div>
+                                        <input type="button" value="Follow" class="btn btn-outline-primary">
+                                    </div>
+
+
+                                </div>
+
+
                             </div>
+
 
                         </div>
 
