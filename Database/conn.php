@@ -46,6 +46,8 @@ try{
 
     echo "User registered successfully";
 
+  
+
     header("location: ../PhP-html/Php/Main.php");
 //    $stmt = $conn   ->prepare($sql);
 //    $stmt->execute();
