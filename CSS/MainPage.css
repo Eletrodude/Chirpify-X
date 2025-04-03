@@ -1,117 +1,153 @@
 /* Global Styles */
 /* ------------------------------- */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: linear-gradient(to right, #0D1B2A, #1B263B);
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+*{
     padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #E6E6FA;
-}
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    font-family: "Quicksand", sans-serif;
 
+}
+html {
+    scroll-behavior: smooth;
+    
+}
+.row{
+
+    display: flex;  
+
+}
 /* Post Section Styling */
 /* ------------------------------- */
-.Posts {
+.all-divs{
+    display: flex;
     border: 3px solid black;
     border-right: none;
-    background-color: #00264D;
-    width: 50%;
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 2%;
+    padding: 2rem 0rem 2rem 8rem;
+    
 }
 
 /* Button Styling */
 /* ------------------------------- */
 .Buttons {
+    border-bottom: 1px solid rgb(146, 142, 142);
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    gap: 10rem;
-    /*padding: 10px;*/
+    justify-content: first baseline;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    
+    
 }
-
-.Buttons button {
-    background-color: #00264D;
-    color: #E6E6FA;
+ .Buttons button { 
     border: none;
-    padding: 10px 20px;
-    font: bold 1.5rem Arial, serif;
+    padding: 10px 10px;
+    font: bold  Arial, serif;
+    font-weight: 700;
     cursor: pointer;
-    margin: auto;
-}
+    font-size: .9rem;  
+} 
 
-.Button1, .Button2 {
-    flex: 1;
-}
 
 /* Left Sidebar Styling */
 /* ------------------------------- */
+
 .SideBar {
-    border: 3px solid black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 25%;
+    border-right: 1px solid rgb(146, 142, 142);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(to right, #0D1B2A, #1B263B);
+    align-items: center;
+    gap: 2rem;
+    
+    
+    
+}
+.Logo{
+    padding: 20px;
+    
+
+}
+.Logo h1{
+    font-family: "Dancing Script", cursive;
+    background: linear-gradient(to right, #b60799, #200f80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.Links {
+.SideBar ul{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
 }
 
-.Links a {
-    font-size: 1.5rem;
-    color: #E6E6FA;
+.SideBar a {
+    
+    font-weight: 600;
     text-decoration: none;
     margin: 10px 0;
+
 }
 
 /* Right Sidebar Styling */
 /* ------------------------------- */
 .SideBar2 {
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 25%;
-    border: 3px solid black;
+    
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #0D1B2A, #1B263B);
+    
 }
 
-.SearchBar {
-    width: 80%;
-    margin: 20px auto;
+.SearchBar form{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 1rem;
+
 }
-
-.SideBar2 #Search {
-
-    padding: 10px;
+.acounts{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    
+}
+.acounts h2{
     font-size: 1rem;
-    border-radius: 300px;
-    background-color: #E6E6FA;
-    width: 100%;
+    font-weight: 600;
+    color: rgb(140, 131, 131);
 }
 
-/* Image Styling */
-/* ------------------------------- */
-img {
-    max-width: 5rem;
-    max-height: 5rem;
-    z-index: 2;
+.user-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px;
+    border: #200f80 1px solid;
+    border-radius: 20px;
+    
+}
+.user{
+    display:flex;
+    justify-content: center;
+
+}
+.user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.user h3{
+    font-size: .9rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+    padding: 0 10px;
 }
