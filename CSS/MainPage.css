@@ -21,6 +21,11 @@ html {
     display: flex;  
 
 }
+
+body{
+    overflow:scroll;
+}
+
 /* Post Section Styling */
 /* ------------------------------- */
 .all-divs{

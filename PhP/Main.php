@@ -13,7 +13,7 @@
 
     
     <div class="row" >              
-                        <div class=" SideBar  col-2" >
+                    <div class=" SideBar  col-2" >
                             <div  class="Logo">
                                        
                                     <h1 class="nav-item"> Chirpify</h1>

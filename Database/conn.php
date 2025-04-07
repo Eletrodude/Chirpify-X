@@ -24,7 +24,7 @@ try{
 
 
     $sql =
-        "INSERT INTO data (First_Name,Last_Name,Birth_Date,Country_Of_Residence,Email,Username,Password,
+        "INSERT INTO user_information (First_Name,Last_Name,Birth_Date,Country_Of_Residence,Email,Username,Password,
          Telephone_Number) 
         VALUES (:First_Name,:Last_Name,:Birth_Date,:Country_Of_Residence,:Email,
             :Username,:Password,:Telephone_Number) ";
@@ -45,6 +45,7 @@ try{
     $insert_user->execute();
 
     echo "User registered successfully";
+    echo 'UserID is';
 
     header("location: ../PhP-html/Php/Main.php");
 //    $stmt = $conn   ->prepare($sql);
