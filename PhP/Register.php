@@ -11,6 +11,11 @@
                     <div class="card-body">
                         <form method="POST" action="../Database/conn.php">
                             <div class="mb-3">
+                                <label for="username" class="form-label">Gebruikersnaam</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+
+                            <div class="mb-3">
                                 <label for="first_name" class="form-label">Voornaam</label>
                                 <input type="text" class="form-control" id="first_name" name="first_name" required>
                             </div>
@@ -229,12 +234,6 @@
                                 <label for="email" class="form-label">E-mailadres</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
-
-                            <div class="mb-3">
-                                <label for="username" class="form-label">Gebruikersnaam</label>
-                                <input type="text" class="form-control" id="username" name="username" required>
-                            </div>
-
                             <div class="mb-3">
                                 <label for="password" class="form-label">Wachtwoord</label>
                                 <input type="password" class="form-control" id="password" name="password" required>

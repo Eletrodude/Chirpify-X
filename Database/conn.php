@@ -10,7 +10,7 @@ if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
     return;
 }elseif($_POST['password'] != $_POST['confirm_password']) {
     echo'Error: Passwords do not match';
-    header('location: ../pHP-HTML/register.html');
+    header('location: ./PHP/register.php');
     return;
 }
 

@@ -14,23 +14,20 @@
 }
 html {
     scroll-behavior: smooth;
+    
 }
 
-.row{
-
-    display: flex;
-    height: 100vh;
-    
-    
-
+img.rounded-circle {
+    border-radius: 0 !important;
 }
 /* Post Section Styling */
 /* ------------------------------- */
-.Posts {
+.all-divs{
     display: flex;
+    flex-direction: column;
     border: 3px solid black;
     border-right: none;
-    
+    padding: 2rem 0rem 2rem 6rem;
     
 }
 
@@ -43,20 +40,17 @@ html {
     height: 10%;
     width: 100%;
     align-items: center;
-    gap: 1rem;
+    gap: 12px;
+    
     
 }
-
  .Buttons button { 
     border: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     font: bold  Arial, serif;
     font-weight: 700;
     cursor: pointer;
-
-    
-    
-    
+    font-size: .9rem;  
 } 
 
 
@@ -69,7 +63,7 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    
+    height: 100vh;
     
     
 }
@@ -84,7 +78,58 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.Post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.Post1{
+    
+    margin-top: 20px  ;
+    border: 1px solid rgb(167, 54, 54);
+    width: 560px;
+    
 
+}
+.post-Header{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-top: 1rem;
+    
+}
+.post-Header a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    
+ 
+    
+}
+.post-Header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    
+}
+.post-Body{ 
+    display: flex;
+    
+ 
+
+}
+.post-Body img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin-top: 1rem;
+    
+    
+ 
+}
 .SideBar ul{
     display: flex;
     flex-direction: column;
@@ -103,16 +148,58 @@ html {
 /* Right Sidebar Styling */
 /* ------------------------------- */
 .SideBar2 {
-    border-left: 1px solid rgb(146, 142, 142);
-    display: flex;
     
+    display: flex;
+    justify-content: center;
+    height: 100vh;
     
 }
 
 .SearchBar form{
-    border-bottom: 1px solid rgb(146, 142, 142);
+    
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    margin-top: 1rem;
 
+}
+.acounts{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    
+}
+.acounts h2{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(140, 131, 131);
+}
+
+.user-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px;
+    border: #200f80 1px solid;
+    border-radius: 20px;
+    
+}
+.user{
+    display:flex;
+    justify-content: center;
+
+}
+.user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.user h3{
+    font-size: .9rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+    padding: 0 10px;
 }
