@@ -1,4 +1,16 @@
 
+<?php session_start();
+if (isset($_SESSION['Error'])){
+    echo $_SESSION['Error'];
+    $_SESSION['Error'] = "";
+}else {
+    $_SESSION['Error'] = "";
+}
+
+
+?>
+
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../CSS/style.css">
 
