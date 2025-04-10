@@ -1,18 +1,72 @@
 <?php
+
+session_start();
+
 $username = 'root';
 $password = '';
 
 
 if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
     echo'Error: Invalid email';
-    return;} elseif(strlen($_POST['password']) <= 8) {
+    return;
+}
+
+ elseif(strlen($_POST['password']) < 8) {
     echo'Error: Invalid password';
     return;
-}elseif($_POST['password'] != $_POST['confirm_password']) {
+}
+
+elseif($_POST['password'] != $_POST['confirm_password']) {
     echo'Error: Passwords do not match';
     header('location: ../pHP-HTML/register.html');
     return;
 }
+
+
+
+function CheckIfAccountExists($Email,$Username,$Database) {
+    $Email_Query = 'SELECT COUNT(*) FROM user_information WHERE Email = :Email';
+    $Email_Statement = $Database ->prepare($Email_Query);
+    $Email_Statement -> bindParam(':Email', $Email);
+    $Email_Statement ->execute();
+
+    $Email_Count = $Email_Statement -> fetchColumn();
+
+
+
+
+    $Username_Query = 'SELECT COUNT(*) FROM user_information WHERE Username = :Username';
+    $Username_Statement = $Database ->prepare($Username_Query);
+    $Username_Statement -> bindParam(':Username', $Username);
+    $Username_Statement ->execute();
+
+    $Username_Count = $Username_Statement -> fetchColumn();
+
+    if ($Email_Count > 0){
+
+        echo'Email exists';
+        return 'Email Exists';
+
+
+    } elseif ($Username_Count > 0 ){
+        echo 'Username Exists';
+        return 'Username Exists';
+
+
+
+    }else {
+
+        return true;
+    }
+
+
+
+}
+
+
+
+
+
 
 
 try{
@@ -30,6 +84,20 @@ try{
             :Username,:Password,:Telephone_Number) ";
 
 
+   $Var =  CheckIfAccountExists($_POST['email'],$_POST['username'],$conn);
+
+    if ($Var == 'Email Exists') {
+        echo ' Email taken';
+        header('location: ../PhP/Register.php');
+        return;
+    } elseif($Var == 'Username Exists'){
+        echo 'Username taken';
+        header('location: ../PhP/Register.php');
+        return;
+
+    }
+
+
     $insert_user = $conn->prepare($sql);
 
     $insert_user->bindParam(':Username',$_POST['username']);
@@ -45,15 +113,14 @@ try{
     $insert_user->execute();
 
     echo "User registered successfully";
-    echo 'UserID is';
-
-    header("location: ../PhP-html/Php/Main.php");
-//    $stmt = $conn   ->prepare($sql);
-//    $stmt->execute();
-
+    $User_Id = $conn->lastInsertId();
+    echo "User registered successfully. Your User ID is: " . $User_Id;
     
 
+   header("location: ../PhP/Main.php");
+   exit()
 
+;
 }catch (PDOException $e){
     echo "Connection failed: " . $e->getMessage();
 }
