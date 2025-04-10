@@ -43,6 +43,9 @@
                                     <li class="nav-item">
                                     <a class="nav-link" href="#">Legal</a>
                                     </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">loguit</a>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -74,6 +77,20 @@
                                                 <img src="../Assets/Images/pexels-pixabay-268533.jpg" alt="Account1" class="img-fluid rounded-circle">
                                             </div>
     	                                    <div class="icons">
+                                                    <a href="#"><img src="../Assets/Images/icons8-like-50.png" alt="like-icon"></a>
+                                                    <a href="#"><img src="../Assets/Images/icons8-topic-50.png" alt="comment-icons"></a>
+                                                     
+                                            </div>
+                                            <div class="comments">
+                                                <div class="comment">
+                                                    
+                                                    <a href="#">user-name</a>
+                                                    <p>Dit is een comment</p>
+                                                </div>
+                                                <form action="">
+                                                    <input type="text" name="comment" id="comment" placeholder="Add a comment...">
+                                                    <button type="submit" class="btn btn-outline-primary">plaatsen</button>
+                                                </form>
 
                                             </div>
                                             
@@ -97,14 +114,15 @@
                                     <div class="user-container">
                                         <div class="user">
                                             <img src="../Assets/Images/pexels-pixabay-268533.jpg" alt="Account1" class="img-fluid rounded-circle">
-                                            <h3>Account</h3>
+                                            <a href="#">Account</a>
                                         </div>
                                         <input type="button" value="Follow" class=" btn btn-outline-primary ">
                                     </div>
                                     <div class="user-container">
                                         <div class="user">
                                             <img src="../Assets/Images/pexels-pixabay-268533.jpg" alt="Account1" class="img-fluid rounded-circle">
-                                            <h3>Account</h3>
+                            
+                                            <a href="#">Account</a>
                                         </div>
                                         <input type="button" value="Follow" class="btn btn-outline-primary">
                                     </div>

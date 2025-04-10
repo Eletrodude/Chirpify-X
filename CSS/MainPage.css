@@ -14,12 +14,10 @@
 }
 html {
     scroll-behavior: smooth;
-    
+    overflow-y: scroll;
 }
 
-img.rounded-circle {
-    border-radius: 0 !important;
-}
+
 /* Post Section Styling */
 /* ------------------------------- */
 .all-divs{
@@ -88,15 +86,14 @@ img.rounded-circle {
 .Post1{
     
     margin-top: 20px  ;
-    border: 1px solid rgb(167, 54, 54);
-    width: 560px;
+    width: 500px;
+    height: 750px;
     
-
 }
 .post-Header{
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 20px 20px 10px 0px;
     margin-top: 1rem;
     
 }
@@ -113,22 +110,50 @@ img.rounded-circle {
     height: 50px;
     border-radius: 50%;
     margin-right: 0.5rem;
+    border: 1px solid rgb(146, 142, 142);
     
 }
 .post-Body{ 
     display: flex;
-    
- 
+    border: 1px solid rgb(146, 142, 142);
+    margin: 5px 20px;
 
 }
 .post-Body img{
     width: 100%;
-    height: 100%;
-    border-radius: 0;
+    height: 450px;
     margin-top: 1rem;
     
     
- 
+}
+.post-Body img.rounded-circle {
+    border-radius: 0 !important;
+}
+.icons {
+    padding: 5PX 20px;
+    
+}
+.icons img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    
+}
+.comments{
+    padding:  0 20px;
+    
+}
+.comment {
+
+    display: flex;
+
+}
+.comment a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    margin-right: 5px;
+    
 }
 .SideBar ul{
     display: flex;
