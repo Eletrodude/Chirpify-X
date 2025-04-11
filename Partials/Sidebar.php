@@ -25,7 +25,7 @@
                 <a class="nav-link" href="#">Help</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Legal</a>
+                <a class="nav-link" href="../SideBarLinks/Legal.php">Legal</a>
             </li>
         </ul>
     </div>

@@ -1,0 +1,195 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.row {
+    display: flex;
+}
+
+body {
+    overflow: scroll;
+}
+
+/* Left Sidebar Styling */
+.SideBar {
+    border-right: 1px solid rgb(146, 142, 142);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: fixed;
+    height: 100vh;
+    text-decoration: none;
+    
+    
+}
+.Logo{
+    padding: 20px;
+    
+
+}
+.Logo h1{
+    font-family: "Dancing Script", cursive;
+    background: linear-gradient(to right, #b60799, #200f80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.SideBar ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.SideBar a {
+    
+    font-weight: 600;
+    text-decoration: none;
+    margin: 10px 0;
+
+}
+
+/* Content Container */
+.content-container {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px 40px;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(146, 142, 142);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #b60799;
+}
+
+/* Tab Container */
+.tab-container {
+    margin-top: 30px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #111;
+    border: 1px solid #333;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #222;
+}
+
+.tab.active {
+    background-color: #b60799;
+    color: white;
+    border-color: #b60799;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 20px 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Policy Sections */
+.policy-section {
+    margin-bottom: 40px;
+}
+
+.policy-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #b60799;
+}
+
+.policy-section h2 {
+    font-size: 1.4rem;
+    margin: 20px 0 15px;
+    color: #b60799;
+}
+
+.policy-section h3 {
+    font-size: 1.2rem;
+    margin: 15px 0 10px;
+    color: #999;
+}
+
+.policy-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.policy-section ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.policy-section li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.last-updated {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Strong Text */
+strong {
+    color: #b60799;
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .SideBar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(146, 142, 142);
+    }
+    
+    .content-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+}

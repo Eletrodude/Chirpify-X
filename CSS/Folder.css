@@ -59,9 +59,7 @@ body{
     /* display: flex;
     flex-direction: column; */
     border-bottom: 1px rgb(255, 255, 255) solid;
-    div{
-        display: flex;
-    }
+   
     
 
 
