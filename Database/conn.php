@@ -45,7 +45,6 @@ $Var;
 try {
     $conn = new PDO("mysql:host=localhost;dbname=chirpify", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
     if($_SESSION['Register'] == true ){
         $Var = true;
         if ( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
@@ -81,21 +80,6 @@ try {
             :Username,:Password) ";
 
 
-    // $Var =  CheckIfAccountExists($_POST['email'], $_POST['username'], $conn);
-    // error_log("Email check result for {$_POST['email']}: $Var");
-
-    // if ($Var == 'Email Exists') {
-    //     $_SESSION['Error'] = 'Email taken';
-    //     header('location: ../PhP/Register.php');
-
-    //     return;
-    // } elseif ($Var == 'Username Exists') {
-
-    //     $_SESSION['Error'] = 'Username taken';
-    //     header('location: ../PhP/Register.php');
-    //     return;
-    // }
-
 
     $insert_user = $conn->prepare($sql);
 
@@ -106,7 +90,7 @@ try {
     $insert_user->bindParam(':Last_Name', $_POST['last_name']);
     $insert_user->bindParam(':Birth_Date', $_POST['birth_date']);
     $insert_user->bindParam(':Country_Of_Residence', $_POST['country_of_residence']);
-
+    
 
 
     $insert_user->execute();
@@ -116,7 +100,7 @@ try {
     echo "User registered successfully. Your User ID is: " . $User_Id;
 
 
-
+    $_SESSION['User-ID'] = '';
     $_SESSION['Email'] = '';
     $_SESSION['Username'] = '';
     $_SESSION['Error'] = ""; 

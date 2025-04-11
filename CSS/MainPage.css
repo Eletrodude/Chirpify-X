@@ -12,28 +12,20 @@
     font-family: "Quicksand", sans-serif;
 
 }
-
 html {
     scroll-behavior: smooth;
-    
-}
-.row{
-
-    display: flex;  
-
+    overflow-y: scroll;
 }
 
-body{
-    overflow:scroll;
-}
 
 /* Post Section Styling */
 /* ------------------------------- */
 .all-divs{
     display: flex;
+    flex-direction: column;
     border: 3px solid black;
     border-right: none;
-    padding: 2rem 0rem 2rem 8rem;
+    padding: 2rem 0rem 2rem 6rem;
     
 }
 
@@ -69,7 +61,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    position: absolute;
+    height: 100vh;
     
     
 }
@@ -84,7 +76,113 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.Post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
 
+.bericht{
+    display: flex;
+   
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.bericht form{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+
+}
+input[type="file"] {
+    color: rgb(17, 17, 185);
+    
+    border: 1px solid  rgb(15, 15, 182);
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 1rem;
+}
+
+
+
+
+.Post1{
+    
+    margin-top: 20px  ;
+    width: 500px;
+    height: 750px;
+    
+}
+.post-Header{
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 10px 0px;
+    margin-top: 1rem;
+    
+}
+.post-Header a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    
+ 
+    
+}
+.post-Header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    border: 1px solid rgb(146, 142, 142);
+    
+}
+.post-Body{ 
+    display: flex;
+    border: 1px solid rgb(146, 142, 142);
+    margin: 5px 20px;
+    padding: 6rem 0;
+    border-radius: 3px;
+}
+.post-Body img{
+    width: 100%;
+    height: 100%;
+     
+}
+.post-Body img.rounded-circle {
+    border-radius: 0 !important;
+}
+.icons {
+    padding: 5PX 20px;
+    
+}
+.icons img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px; 
+}
+
+.comments{
+    padding:  0 20px;
+    
+}
+
+.comment {
+
+    display: flex;
+
+}
+.comment a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    margin-right: 5px;
+    
+}
 .SideBar ul{
     display: flex;
     flex-direction: column;
@@ -106,6 +204,7 @@ body{
     
     display: flex;
     justify-content: center;
+    height: 100vh;
     
 }
 
@@ -150,7 +249,8 @@ body{
     border-radius: 50%;
     margin-right: 20px;
 }
-.user h3{
+.user a{
+    text-decoration: none;
     font-size: .9rem;
     font-weight: 600;
     color: white;
