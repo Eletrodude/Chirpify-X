@@ -83,6 +83,34 @@ html {
     justify-content: center;
     
 }
+
+.bericht{
+    display: flex;
+   
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.bericht form{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+
+}
+input[type="file"] {
+    color: rgb(17, 17, 185);
+    
+    border: 1px solid  rgb(15, 15, 182);
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 1rem;
+}
+
+
+
+
 .Post1{
     
     margin-top: 20px  ;
@@ -117,14 +145,13 @@ html {
     display: flex;
     border: 1px solid rgb(146, 142, 142);
     margin: 5px 20px;
-
+    padding: 6rem 0;
+    border-radius: 3px;
 }
 .post-Body img{
     width: 100%;
-    height: 450px;
-    margin-top: 1rem;
-    
-    
+    height: 100%;
+     
 }
 .post-Body img.rounded-circle {
     border-radius: 0 !important;
@@ -134,15 +161,16 @@ html {
     
 }
 .icons img{
-    width: 40px;
-    height: 40px;
-    margin-right: 5px;
-    
+    width: 30px;
+    height: 30px;
+    margin-right: 5px; 
 }
+
 .comments{
     padding:  0 20px;
     
 }
+
 .comment {
 
     display: flex;
@@ -221,7 +249,8 @@ html {
     border-radius: 50%;
     margin-right: 20px;
 }
-.user h3{
+.user a{
+    text-decoration: none;
     font-size: .9rem;
     font-weight: 600;
     color: white;
