@@ -9,6 +9,6 @@
 </head>
 <body>
       <?php require'.//PhP/LogIn.php'; ?>
-
+     
 </body>
 </html>

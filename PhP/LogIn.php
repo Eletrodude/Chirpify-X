@@ -1,6 +1,4 @@
 
-<<<<<<< Updated upstream
-=======
 <?php 
 session_start();
 $Error = $_SESSION['Error'];
@@ -8,7 +6,6 @@ $Error = $_SESSION['Error'];
 if ($Error == '')
 
 ?>
->>>>>>> Stashed changes
 <div class="Parent">
 
     <div class="LogInImage">
