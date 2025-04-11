@@ -1,5 +1,7 @@
 
 <?php session_start();
+$_SESSION['Register'] = true;
+
 if (isset($_SESSION['Error'])){
     echo $_SESSION['Error'];
     $_SESSION['Error'] = "";
@@ -19,7 +21,7 @@ if (isset($_SESSION['Error'])){
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header text-center">Inloggen</div>
+                    <div class="card-header text-center">Register</div>
                     <div class="card-body">
                         <form method="POST" action="../Database/conn.php">
                             <div class="mb-3">
@@ -256,11 +258,16 @@ if (isset($_SESSION['Error'])){
                                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Inloggen</button>
+
+
+
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <img class="Image" src="../Assets/Images/proxy-image.jpeg" alt="Night sky" >
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
