@@ -1,3 +1,13 @@
+<<<<<<< Updated upstream
+=======
+<?php 
+session_start();
+$Error = $_SESSION['Error'];
+
+if ($Error == '')
+
+?>
+>>>>>>> Stashed changes
 <div class="Parent">
 
     <div class="LogInImage">
@@ -6,6 +16,7 @@
     </div>
     <!--    <h1 id = "Title">Chirpify</h1>-->
    <div class="LogIn">
+    
 
         <form action="./PhP/Main.php" class="Form" method="post">
 
@@ -24,5 +35,7 @@
 
         </form>
     </div>
+
+    
 </div>
 
