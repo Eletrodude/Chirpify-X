@@ -2,6 +2,7 @@
 session_start();
 $username = 'root';
 $password = '';
+file_put_contents("debug.txt", "METHOD: " . $_SERVER['REQUEST_METHOD']);
 try {
     $conn = new PDO("mysql:host=localhost;dbname=chirpify", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -56,5 +57,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   header ('Location:../PhP/Main.php ');
   exit;
 ?>
-
-

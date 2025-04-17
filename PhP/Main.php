@@ -74,19 +74,35 @@
                                             </div>
 
                                             <div class="icons">
-                                                <a href="#"><img src="../Assets/Images/icons8-like-50.png" alt="like-icon"></a>
-                                                <a href="#"><img src="../Assets/Images/icons8-topic-50.png" alt="comment-icon"></a>
+                                            <button onclick="event.preventDefault(); likePost(this)">
+                                                <img src="../Assets/Images/icons8-like-50.png" alt="like-icon">
+                                            </button>
+                                                <a href="../Database/comment.php"><img src="../Assets/Images/icons8-topic-50.png" alt="comment-icon"></a>
                                             </div>
-
+                                            <span id="likeCount">0 LIKE</span>
                                             <div class="comments">
-                                                <div class="comment">
-                                                    <a href="#">user-name</a>
-                                                    <p>Dit is een comment</p>
-                                                </div>
-                                                <form action="">
-                                                    <input type="text" name="comment" id="comment" placeholder="Add a comment...">
-                                                    <button type="submit" class="btn btn-outline-primary">plaatsen</button>
-                                                </form>
+                                                
+                                            <?php
+                                                $username = 'root';
+                                                $password = '';
+                                                try {
+                                                    $conn = new PDO("mysql:host=localhost;dbname=chirpify", $username, $password);
+                                                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                                                    $stmt = $conn->query("SELECT * FROM comments ORDER BY created_at DESC");
+                                                    foreach ($stmt as $row) {
+                                                        echo "<p><strong>" .htmlspecialchars($_SESSION['Username']) . "</strong>: " . htmlspecialchars($row['comment']) . "</p>";
+                                                    }
+
+                                                } catch (PDOException $e) {
+                                                    echo "SEND FOET" . $e->getMessage();
+                                                }
+                                                ?>
+
+                                            <form action="../Database/comment.php" method="POST">
+                                                <textarea name="comment" placeholder="اكتب تعليقك..." required></textarea>
+                                                <button type="submit">إرسال</button>
+                                            </form>
                                             </div>
                                         </div>
                                     <?php endforeach; ?>
